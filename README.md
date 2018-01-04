@@ -1,8 +1,8 @@
 # Malvarma: Secure Monero cold wallets for the truly paranoid
  
-Malvarma aims to make Monero cold wallet generation easy, affordable, and
-secure. It is designed for highly security-conscious people, but an average
-user should find it easy to use. When Malvarma is complete, a user will be able
+Malvarma aims to make Monero cold wallet generation easy and secure.
+It caters to highly security-conscious people, but is designed to be easy for an average
+user to use. When Malvarma is complete, a user will be able
 to generate a cold wallet in just a few broad steps:
 
 1. Download, verify, and burn the Malvarma image onto a microSD card.
@@ -39,12 +39,12 @@ software security, while making the entire process as foolproof as possible.
 ## Why use Malvarma?
 
 Unfortunately, it is not easy to create a cold wallet securely. Several
-problems stand in the way and Malvarma seeks to mitigate these issues.
+problems stand in the way, so Malvarma seeks to mitigate them.
 
 ### Network interfaces
 
 **Problem:** A cold wallet should be generated using processes and
-devices with as few attack surfaces as possible. Network connectivity is one
+devices which have as few attack surfaces as possible. Network connectivity is one
 such attack surface though which an attacker may (hypothetically) leverage to
 extract private keys.
 
@@ -55,8 +55,9 @@ it is possible to disable wireless adapters on most PCs or laptops, the
 non-wireless version of the Raspberry Pi Zero is *always* air-gapped, so it
 avoids this entire class of vulnerabilities.
 
-Note that this only matters if you don't want to have to trust that your device
-can turn wireless off. Again, this is a guide for the highly security-conscious.
+Note that this only matters if you don't want to have to *trust* that your device
+can indeed turn its wireless adapter off. Again, this is a guide for the highly
+security-conscious, and assumes an extremely low risk appitite.
 
 ### Malware
 
@@ -105,10 +106,13 @@ works](https://www.reddit.com/r/Monero/comments/7de2pj/ledger_hardware_wallet_mo
 Note: **Malvarma is not a hardware wallet**, and that it will not store any
 generated wallets.
 
+## Great, where's the code?
+
+It's still under development.
+
 ## What does *malvarma* mean?
 
 Malvarma is Espernanto for cold.
-
 
 ## Notes
 

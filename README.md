@@ -110,6 +110,54 @@ generated wallets.
 
 It's still under development.
 
+## Building Malvarma
+
+1) Install dependencies:
+
+```bash
+sudo apt install libguestfs-tools
+```
+
+2) Download and verify Raspbian Lite:
+
+```bash
+git clone git@github.com:weijiekoh/malvarma.git && \
+cd malvarma && \
+git clone git@github.com:weijiekoh/py2-monero-wallet-generator.git && \
+wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/2017-11-29-raspbian-stretch-lite.zip -O raspberry/2017-11-29-raspbian-stretch-lite.zip && \
+wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/2017-11-29-raspbian-stretch-lite.zip.sha256 -O raspberry/checksum.sha256 && \
+cd raspberry && \
+sha256sum -c checksum.sha256
+```
+
+If the `sha256sum` command fails, **do not continue**.
+
+3) Modify the Raspbian image
+
+`build.py` requires root permissions through `sudo` because it needs to mount the Raspbian image using `guestmount`.
+
+```bash
+unzip 2017-11-29-raspbian-stretch-lite.zip && \
+cd .. && \
+sudo python3 build.py
+```
+
+`build.py` configures the Raspberry Pi image as follows:
+
+- Disables WiFi and Bluetooth (in case it's run on a wireless-enabled Raspberry Pi
+- Removes some unnecessary system services
+- TODO: install `rng-tools` and run `rngtest`
+- Automatically run `python py2-monero-wallet-generator/gen_wallet.py` upon
+  boot to generate and display the keys to a cold wallet 
+
+4) Flash the image onto an SD card
+
+Assuming that your SD card reader is at `/dev/mmcblk0`, run:
+
+```bash
+sudo dd bs=4M if=raspberry/2017-11-29-raspbian-stretch-lite.img of=/dev/mmcblk0 conv=fsync
+```
+
 ## What does *malvarma* mean?
 
 Malvarma is Espernanto for cold.

@@ -1,0 +1,10 @@
+#!/bin/sh -e
+#echo
+#echo
+#dpkg -i /rng-tools_2-unofficial-mt.14-1_armhf.deb
+#sleep 1
+#cat /dev/urandom | rngtest -c 1000
+python /py2-monero-wallet-generator/gen_wallet.py
+echo "You may now destroy this Raspberry Pi device and SD card as per the instructions at https://github.com/weijiekoh/malvarma"
+
+exit 0

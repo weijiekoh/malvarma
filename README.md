@@ -164,7 +164,9 @@ Malvarma is Espernanto for cold.
 
 ## Want to buy me a coffee?
 
-Send tips to `4B4CBHf9qu8e67JWRYASFKTLT42fQCLHsDNDxzW71CjqRNtw8ZBN5rU1pPiVZEDPgv9rHfs23VpE9jpSrLpkWqmEQsbfj6i` if you'd like :)
+Send XMR to
+`4B4CBHf9qu8e67JWRYASFKTLT42fQCLHsDNDxzW71CjqRNtw8ZBN5rU1pPiVZEDPgv9rHfs23VpE9jpSrLpkWqmEQsbfj6i`
+if you'd like :)
 
 
 ## Notes

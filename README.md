@@ -11,7 +11,7 @@ to generate a cold wallet in just a few broad steps:
 plug it into a HDMI screen, and turn it on.
 3. A mnemonic seed, private spend/view keys, and public address should
    automatically show up on the screen. Write it down and store it safely.
-4. Following a visual guide, destroy particular components of the Raspberry
+4. Following this visual guide, destroy particular components of the Raspberry
    Pi Zero using hand tools.
 
 Yes - it is a little extreme to suggest that one destroy a perfectly functional
@@ -81,7 +81,9 @@ electronic waste can harm the environment.
 
 **Solution:** A Raspberry Pi Zero only costs USD$5 and is very small. It is
 therefore more economical and relatively less harmful to the environment to
-destroy after use.
+destroy after use. If you don't want to destroy your Raspberry Pi Zero, store
+it somewhere safe and do not use it until the day that you empty your cold
+wallet of all funds and no longer use that address.
 
 ### Ease of use
 

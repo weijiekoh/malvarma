@@ -1,9 +1,12 @@
 #!/bin/sh -e
-#echo
-#echo
-#dpkg -i /rng-tools_2-unofficial-mt.14-1_armhf.deb
-#sleep 1
-#cat /dev/urandom | rngtest -c 1000
+echo "Running Malvarma..."
+echo
+echo "[malvarma] Installing rng-tools"
+dpkg -i /rng-tools_2-unofficial-mt.14-1_armhf.deb
+sleep 1
+echo "[malvarma] Testing available entropy..."
+cat /dev/urandom | rngtest -c 1000
+echo "[malvarma] Generating cold wallet..."
 python /py2-monero-wallet-generator/gen_wallet.py
 echo "You may now destroy this Raspberry Pi device and SD card as per the instructions at https://github.com/weijiekoh/malvarma"
 

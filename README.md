@@ -202,16 +202,16 @@ Instructions tested on Ubuntu 17.10:
 ```bash
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe" && \
 sudo apt update && \
-sudo apt install libguestfs-tools git python3 coreutils wget
+sudo apt -y install libguestfs-tools git python3 coreutils wget
 ```
 
 ### 2. Download and verify required files:
 
 ```bash
-git clone git@github.com:weijiekoh/malvarma.git && \
+git clone https://github.com/weijiekoh/malvarma.git && \
 cd malvarma && \
-git clone git@github.com:weijiekoh/py2-monero-wallet-generator.git && \
-sh download_raspbian.sh && \
+git clone https://github.com/weijiekoh/py2-monero-wallet-generator.git && \
+sh download_raspbian.sh
 ```
 
 If the `download_raspbian.sh` command fails, **do not continue** as the
@@ -263,7 +263,7 @@ You may choose to emulate the image using QEMU, but since QEMU will modify the
 image, **remember to delete and rebuild it when you are done**. 
 
 ```
-sudo apt install qemu
+sudo apt -y install qemu
 
 sh run_qemu.sh && rm -rf build/malvarma-0.1.1-alpha.img
 ```

@@ -271,7 +271,7 @@ You may choose to emulate the image using QEMU, but since QEMU will modify the
 image, **remember to delete and rebuild it when you are done**. 
 
 ```
-sudo apt -y install qemu
+sudo apt -y install qemu-system-arm
 
 sh run_qemu.sh && rm -rf build/malvarma-0.1.1-alpha.img
 ```

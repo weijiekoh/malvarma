@@ -111,8 +111,8 @@ if __name__ == "__main__":
         .format(imgfile=imgfile, malvarma_imgfile=malvarma_imgfile)
 
     # create a checksum file
-    hash_malvarma_cmd = "sha256sum {malvarma_imgfile} > {malvarma_checksum_file}" \
-        .format(malvarma_imgfile=malvarma_imgfile, malvarma_checksum_file=malvarma_checksum_file)
+    hash_malvarma_cmd = "sha256sum {malvarma_imgfile} | sed 's/\.\/{build_dir}\///' > {malvarma_checksum_file}" \
+        .format(malvarma_imgfile=malvarma_imgfile, malvarma_checksum_file=malvarma_checksum_file, build_dir=BUILD_DIR)
 
     # execute each command sequentially
     command_sequence = [

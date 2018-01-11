@@ -1,33 +1,47 @@
 # Malvarma: Secure Monero cold wallets for the truly paranoid
  
-Malvarma aims to make Monero cold wallet generation easy and secure.
-It caters to highly security-conscious people, but is designed to be easy for an average
-user to use. When Malvarma is complete, a user will be able
-to generate a cold wallet in just a few broad steps:
+Malvarma aims to make Monero cold wallet generation easy and secure.  It caters
+to highly security-conscious people, but is designed to be easy for an average
+user to use. 
+
+**Use at your own risk. Malvarma is in an alpha release stage and has not been vetted.**
+
+This guide is for Ubuntu Linux users. 
 
 1. Download, verify, and burn the Malvarma image onto a microSD card.
 
-Download `malvarma.img` from:
-
-
-or use any BitTorrent client:
-
-```
-```
+[WebTorrent]()
+[BitTorrent Magnet URI]()
+[Dropbox]()
 
 ```bash
-wget https://raw.githubusercontent.com/weijiekoh/malvarma/master/raspberry/malvarma.img.sha256 && \
-
+tar xf malvarma-0.1-alpha.tar.bz2 && \
+cd malvarma-0.1-alpha && \
+gpg --keyserver pgp.mit.edu --recv-keys 0x90DB43617CCC1632 && \
+gpg --verify malvarma-0.1-alpha.img.sig malvarma-0.1-alpha.img && \
+sha256sum -c malvarma-0.1-alpha.img.sha256
 ```
 
-**Do not continue** if the SHA256 verification fails.
+Windows users should use [Gpg4win](https://gpg4win.org) and 
+
+**Do not continue** if the SHA256 or GPG verification fails.
+
+The following command burn the image to a microSD card assumes that the microSD
+device is at `/dev/mmcblk0`:
+
+```bash
+sudo dd bs=4M if=malvarma-0.1-alpha.img of=/dev/mmcblk0 conv=fsync
+```
+
+Alternatively, use [Etcher](https://etcher.io/) to burn the image..
 
 2. Insert the card into a non-wireless
 [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/),
-plug it into a HDMI screen and miniUSB power source, and turn it on.
+plug it into a HDMI screen and USB power source, and turn it on.
 
-3. A mnemonic seed, private spend/view keys, and public address should
-   automatically show up on the screen. Write it down and store it safely.
+3. After 1-2 minutes, a mnemonic seed, private spend/view keys, and public
+   address should automatically show up on the screen. Write down all this
+   information and store it safely. At minimum, write down the mnemonic seed.
 
 4. Following this visual guide, destroy particular components of the Raspberry
    Pi Zero using hand tools. Specifically, destroy the microSD card and the

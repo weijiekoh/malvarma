@@ -90,6 +90,8 @@ if __name__ == "__main__":
         "/etc/init.d/ssh",
         "/etc/init.d/rpcbind",
         "/etc/init.d/keyboard-setup.sh",
+        "/etc/init.d/resize2fs_once",
+        "/etc/init.d/dhcpcd",
     ]
 
     # commands to disable unnecessary services

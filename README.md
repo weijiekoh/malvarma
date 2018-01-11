@@ -200,14 +200,17 @@ deterministically modify raw disk images, please contact the author. In the
 meantime, please audit the code yourself if you want to fully trust it.
 
 You may choose to emulate the image using QEMU, but since QEMU will modify the
-image, remember to delete and rebuild it when you are done: `cd raspberry && sh run_qemu.sh`
+image, remember to delete and rebuild it when you are done. 
+```
+sh run_qemu.sh && rm -rf build/malvarma-0.1-alpha.img*
+```
 
 ### 4. Flash the image onto an SD card
 
 Assuming that your SD card reader is at `/dev/mmcblk0`, run:
 
 ```bash
-sudo dd bs=4M if=raspberry/malvarma.img of=/dev/mmcblk0 conv=fsync
+sudo dd bs=4M if=build/malvarma-0.1-alpha.img of=/dev/mmcblk0 conv=fsync
 ```
 
 ## What does *malvarma* mean?

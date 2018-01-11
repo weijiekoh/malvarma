@@ -36,6 +36,8 @@ if __name__ == "__main__":
     rngtools_file = os.path.join(RPI_DIR, RNGTOOLS_FILE)
     test_entropy_file = os.path.join(current_dir, TEST_ENTROPY_FILE)
     
+
+    create_mountpt_cmd = "mkdir -p {mountpt}".format(mountpt=mountpt)
     # command to mount the /boot partition of the RPi image
     mount_boot_cmd = ("guestmount -a {imgfile} -m /dev/sda1 --rw {mountpt}") \
         .format(mountpt=mountpt, imgfile=imgfile)
@@ -117,6 +119,7 @@ if __name__ == "__main__":
 
     # execute each command sequentially
     command_sequence = [
+        create_mountpt_cmd,
         mount_boot_cmd,
         copy_config_cmd,
         copy_cmdline_cmd,

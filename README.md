@@ -21,7 +21,19 @@ plug it into a HDMI screen and miniUSB power source, and turn it on.
    automatically show up on the screen. Write it down and store it safely.
 
 4. Following this visual guide, destroy particular components of the Raspberry
-   Pi Zero using hand tools.
+   Pi Zero using hand tools. Specifically, destroy the microSD card and the
+   Raspberry Pi's BCM2835 processor. According to
+   [Adafruit](https://cdn-learn.adafruit.com/downloads/pdf/introducing-the-raspberry-pi-zero.pdf),
+   the Pi Zero's RAM sits on top of its processor, so be sure to destroy
+   both. Wear eye protection and use a hammer and screwdriver or nail to
+   break through their plastic coatings and pulverise their silicon innards.
+   
+   For inspiration, refer to this article from The Guardian:
+   [Footage released of Guardian editors destroying Snowden hard drives
+](https://www.theguardian.com/uk-news/2014/jan/31/footage-released-guardian-editors-snowden-hard-drives-gchq)
+
+<img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/destroy.png" height=250 />
+
 
 Yes - it is a little extreme to suggest that one destroy a perfectly functional
 Raspberry Pi, but that decision is entirely up to you.

@@ -13,7 +13,7 @@ This guide is for Ubuntu Linux users.
 
 ## 1. Download the Malvarma image
 
-Use any of these links:
+Use any of these links to download the Malvarma image:
 
 [Mega](https://mega.nz/#!bpNQASSb!2mVpUW1cIB_35VHkGEPzCRcdi94EWoiew4_ZTkOI8n0)
 
@@ -55,8 +55,11 @@ Insert the card into a non-wireless
 [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/),
 plug it into a HDMI screen and USB power source, and turn it on.
 
+Note: this is a screenshot from QEMU, and does not precisely reflect the
+output of an actual Raspberry Pi running Malvarma.
+
 <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/loading.png"
-     height=200 />
+     height=300 />
 
 After 1-2 minutes, a mnemonic seed, private spend/view keys, and public address
 should automatically show up on the screen. Write down all this information and
@@ -65,9 +68,11 @@ store it safely. **At minimum, write down the mnemonic seed.**
 <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/final.png"
      height=250 />
 
- Optional: following this visual guide, destroy particular components of the
-Raspberry Pi Zero using hand tools. Specifically, destroy the microSD card and
-the Raspberry Pi's BCM2835 processor. According to
+
+### 4. Optional: destroy the Raspberry Pi Zero and microSD card
+Following this visual guide, destroy particular components of the Raspberry Pi
+Zero using hand tools. Specifically, destroy the microSD card and the Raspberry
+Pi's BCM2835 processor. According to
 [Adafruit](https://cdn-learn.adafruit.com/downloads/pdf/introducing-the-raspberry-pi-zero.pdf),
 the Pi Zero's RAM sits on top of its processor, so be sure to destroy both.
 Wear eye protection and use a hammer and screwdriver or nail to break through

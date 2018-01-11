@@ -92,6 +92,7 @@ if __name__ == "__main__":
         "/etc/init.d/keyboard-setup.sh",
         "/etc/init.d/resize2fs_once",
         "/etc/init.d/dhcpcd",
+        "/etc/init.d/raspi-config",
     ]
 
     # commands to disable unnecessary services

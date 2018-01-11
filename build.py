@@ -21,6 +21,7 @@ RNGTOOLS_FILE = "rng-tools_2-unofficial-mt.14-1_armhf.deb"
 TEST_ENTROPY_FILE = "test_entropy.py"
 
 if __name__ == "__main__":
+    # define file and directory paths
     current_dir = os.path.dirname(__file__)
     mountpt = os.path.join(current_dir, RPI_DIR, MOUNTPT)
     imgfile = os.path.join(current_dir, RPI_DIR, RPI_IMG)
@@ -37,7 +38,9 @@ if __name__ == "__main__":
     test_entropy_file = os.path.join(current_dir, TEST_ENTROPY_FILE)
     
 
+    # command to create the mountpt directory
     create_mountpt_cmd = "mkdir -p {mountpt}".format(mountpt=mountpt)
+
     # command to mount the /boot partition of the RPi image
     mount_boot_cmd = ("guestmount -a {imgfile} -m /dev/sda1 --rw {mountpt}") \
         .format(mountpt=mountpt, imgfile=imgfile)
@@ -53,6 +56,7 @@ if __name__ == "__main__":
     copy_cmdline_cmd = ("cp {cmdline_file} {mountpt}/cmdline.txt") \
         .format(cmdline_file=cmdline_file, mountpt=mountpt)
 
+    # command to unmount the mountpt
     unmount_cmd = ("guestunmount {mountpt}".format(mountpt=mountpt))
 
     files_to_remove = [

@@ -4,14 +4,16 @@ Malvarma is a Raspberry Pi Zero image which securely generates a cold Monero
 wallet.
 
 As far as cold wallet creation goes, Malvarma is designed to be very simple to
-set up and use, while meeting the security needs of highly security-conscious people.
+set up and use. It also strives to meet the needs of highly security-conscious
+people.
 
 **Malvarma is currently in an alpha release stage and has not been vetted. Use
-at your own risk.** At the time of writing, Malvarma has been tested on a
-Raspberry Pi 3 Model B v1.2, but not a Raspberry Pi Zero yet.
+at your own risk.** At the time of writing, Malvarma has only been tested on a
+Raspberry Pi 3 Model B v1.2. I will test it on the Raspberry Pi Zero in the
+coming few weeks.
 
-This guide is for Linux users, but savvy Windows or OSX users should be able to
-perform equivalent steps on their machines.
+This guide is for Linux users, but savvy Windows or macOS users should be able
+to perform equivalent steps on their machines.
 
 ## 1. Download the Malvarma image
 
@@ -20,13 +22,7 @@ Use any of these links to download the Malvarma image:
 - [Mega](https://mega.nz/#F!SldQGZgY!9D6aqWp1niaemkS8tU2DqQ)
 - [Dropbox](https://www.dropbox.com/sh/imxygsxfdek7mz9/AAB53XHmV6LYwAdKP4GNY6ALa?dl=0)
 
-P2P Mirrors:
-
-- [Instant.io](https://instant.io/#8e06b76f39eca3a0cd4e4bebe3020176fdb0ebd3)
-- BitTorrent Magnet URI:
-```
-magnet:?xt=urn:btih:8e06b76f39eca3a0cd4e4bebe3020176fdb0ebd3&dn=malvarma-0.1.1-alpha.tar.bz2&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com
-```
+P2P Mirrors: coming soon
 
 ### 2. Unpack and verify the image
 
@@ -54,9 +50,9 @@ Alternatively, use [Etcher](https://etcher.io/) to burn the image.
 Insert the card into a non-wireless
 [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/),
 plug it into a HDMI screen, and then plug it into a USB power source. You
-should plug in the HDMI cable before the micro USB cable because doing the
+should plug in the HDMI cable *before* the micro USB cable because doing the
 reverse could prevent the Raspberry Pi from correctly detecting your screen
-resolution and unfortunately truncating parts of the cold wallet keys.
+resolution and thereby hide characters at the edges of the screen.
 
 Note: this is a screenshot from QEMU, and does not precisely reflect the
 output of an actual Raspberry Pi running Malvarma.
@@ -74,8 +70,8 @@ store it safely. **At minimum, write down the mnemonic seed.**
 
 ### 4. Optional: destroy the Raspberry Pi Zero and microSD card
 Following this visual guide, destroy particular components of the Raspberry Pi
-Zero using hand tools. Specifically, destroy the microSD card and the Raspberry
-Pi's BCM2835 processor. According to
+Zero using sharp hand tools. Specifically, destroy the microSD card and the
+Raspberry Pi's BCM2835 processor. According to
 [Adafruit](https://cdn-learn.adafruit.com/downloads/pdf/introducing-the-raspberry-pi-zero.pdf),
 the Pi Zero's RAM sits on top of its processor, so be sure to destroy both.
 Wear eye protection and use a hammer and screwdriver or nail to break through

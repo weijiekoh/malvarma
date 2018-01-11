@@ -1,10 +1,13 @@
 # Malvarma: Secure Monero cold wallets for the truly paranoid
  
-Malvarma aims to make Monero cold wallet generation easy and secure.  It caters
-to highly security-conscious people, but is designed to be easy for an average
-user to use. 
+Malvarma is a Raspberry Pi Zero image which securely generates a cold Monero
+wallet.
 
-**Use at your own risk. Malvarma is in an alpha release stage and has not been vetted.**
+As far as cold wallet creation goes, Malvarma is designed to be very simple to
+set up and use, while meeting the security needs of highly security-conscious people.
+
+**Malvarma is currently in an alpha release stage and has not been vetted. Use
+at your own risk.**
 
 This guide is for Ubuntu Linux users. 
 
@@ -68,7 +71,8 @@ For inspiration, refer to this article from The Guardian:
 [Footage released of Guardian editors destroying Snowden hard drives
 ](https://www.theguardian.com/uk-news/2014/jan/31/footage-released-guardian-editors-snowden-hard-drives-gchq)
 
-<img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/destroy.png" height=250 />
+<img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/destroy.png"
+     height=250 />
 
 While this is a little extreme, the device is inexpensive and small, and some
 users may wish to maximise their peace of mind. If you don't want to destroy
@@ -167,10 +171,18 @@ generated wallets.
 
 ## Development roadmap
 
-11 January 2018: `0.1-alpha` relased for testing
-End-January 2018: Release a version which provides 2-of-3 split keys using [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing)
+Completed:
+
+- 11 January 2018: `0.1-alpha` relased for testing
+
+Future plans:
+
+- End-January 2018: Release a version which provides 2-of-3 split keys using
+  [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing)
 
 ## Building Malvarma
+
+If you want to make a copy of Malvarma yourself, follow these instructions:
 
 ### 1. Install dependencies:
 

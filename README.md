@@ -31,11 +31,11 @@ magnet:?xt=urn:btih:8e06b76f39eca3a0cd4e4bebe3020176fdb0ebd3&dn=malvarma-0.1.1-a
 ### 2. Unpack and verify the image
 
 ```bash
-tar xf malvarma-0.1-alpha.tar.bz2 && \
-cd malvarma-0.1-alpha && \
+tar xf malvarma-0.1.1-alpha.tar.bz2 && \
+cd malvarma-0.1.1-alpha && \
 gpg --keyserver pgp.mit.edu --recv-keys 0x90DB43617CCC1632 && \
-gpg --verify malvarma-0.1-alpha.img.sig malvarma-0.1-alpha.img && \
-sha256sum -c malvarma-0.1-alpha.img.sha256
+gpg --verify malvarma-0.1.1-alpha.img.sig malvarma-0.1.1-alpha.img && \
+sha256sum -c malvarma-0.1.1-alpha.img.sha256
 ```
 
 **Do not continue** if the SHA256 or GPG verification fails.
@@ -44,7 +44,7 @@ The following command burn the image to a microSD card assumes that the microSD
 device is at `/dev/mmcblk0`:
 
 ```bash
-sudo dd bs=4M if=malvarma-0.1-alpha.img of=/dev/mmcblk0 conv=fsync
+sudo dd bs=4M if=malvarma-0.1.1-alpha.img of=/dev/mmcblk0 conv=fsync
 ```
 
 Alternatively, use [Etcher](https://etcher.io/) to burn the image..
@@ -184,7 +184,7 @@ generated wallets.
 
 Completed:
 
-- 11 January 2018: `0.1-alpha` relased for testing
+- 11 January 2018: `0.1.1-alpha` relased for testing
 
 Future plans:
 
@@ -265,7 +265,7 @@ image, **remember to delete and rebuild it when you are done**.
 ```
 sudo apt install qemu
 
-sh run_qemu.sh && rm -rf build/malvarma-0.1-alpha.img
+sh run_qemu.sh && rm -rf build/malvarma-0.1.1-alpha.img
 ```
 
 ## What does *malvarma* mean?

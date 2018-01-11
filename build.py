@@ -3,7 +3,7 @@ import os
 import sys
 import subprocess
 
-VERSION = "0.1-alpha"
+VERSION = "0.1.1-alpha"
 RPI_DIR = "raspberry"
 CONFIG_DIR = "config"
 BUILD_DIR = "build"

@@ -89,6 +89,12 @@ users may wish to maximise their peace of mind. If you don't want to destroy
 the device, at least store it in a safe place and do not use it until you you
 empty your cold wallet of all funds and no longer use that address.
 
+## Want to buy me a coffee?
+
+Please send XMR to
+`4B4CBHf9qu8e67JWRYASFKTLT42fQCLHsDNDxzW71CjqRNtw8ZBN5rU1pPiVZEDPgv9rHfs23VpE9jpSrLpkWqmEQsbfj6i`
+to support the author - thank you!
+
 ## What is a cold wallet?
 
 If you wish to store moneroj [1] for a long period of time without spending
@@ -273,12 +279,6 @@ rm -rf build/malvarma-<version>.img
 ## What does *malvarma* mean?
 
 Malvarma is Espernanto for cold.
-
-## Want to buy me a coffee?
-
-Please send XMR to
-`4B4CBHf9qu8e67JWRYASFKTLT42fQCLHsDNDxzW71CjqRNtw8ZBN5rU1pPiVZEDPgv9rHfs23VpE9jpSrLpkWqmEQsbfj6i`
-to support the author - thank you!
 
 ## Notes
 

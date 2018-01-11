@@ -197,9 +197,11 @@ If you want to make a copy of Malvarma yourself, follow these instructions:
 
 ### 1. Install dependencies:
 
-For Ubuntu/Debian systems:
+Instructions tested on Ubuntu 17.10:
 
 ```bash
+sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe" && \
+sudo apt update && \
 sudo apt install libguestfs-tools git python3 coreutils wget
 ```
 

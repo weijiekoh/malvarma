@@ -47,7 +47,7 @@ device is at `/dev/mmcblk0`:
 sudo dd bs=4M if=malvarma-0.1.1-alpha.img of=/dev/mmcblk0 conv=fsync
 ```
 
-Alternatively, use [Etcher](https://etcher.io/) to burn the image..
+Alternatively, use [Etcher](https://etcher.io/) to burn the image.
 
 ### 3. Boot the Raspberry Pi Zero
 

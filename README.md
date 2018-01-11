@@ -51,7 +51,10 @@ Alternatively, use [Etcher](https://etcher.io/) to burn the image.
 
 Insert the card into a non-wireless
 [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/),
-plug it into a HDMI screen and USB power source, and turn it on.
+plug it into a HDMI screen, and then plug it into a USB power source. You
+should plug in the HDMI cable before the micro USB cable because doing the
+reverse could prevent the Raspberry Pi from correctly detecting your screen
+resolution and unfortunately truncating parts of the cold wallet keys.
 
 Note: this is a screenshot from QEMU, and does not precisely reflect the
 output of an actual Raspberry Pi running Malvarma.

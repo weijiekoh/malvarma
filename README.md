@@ -7,7 +7,16 @@ to generate a cold wallet in just a few broad steps:
 
 1. Download, verify, and burn the Malvarma image onto a microSD card.
 
+Download `malvarma.img` from:
+
+
+or use any BitTorrent client:
+
+```
+```
+
 ```bash
+wget https://raw.githubusercontent.com/weijiekoh/malvarma/master/raspberry/malvarma.img.sha256 && \
 
 ```
 
@@ -135,50 +144,70 @@ It's still under development.
 
 ## Building Malvarma
 
-1) Install dependencies:
+### 1. Install dependencies:
 
+For Ubuntu/Debian systems:
 ```bash
-sudo apt install libguestfs-tools
+sudo apt install libguestfs-tools git python3 coreutils wget
 ```
 
-2) Download and verify Raspbian Lite:
+### 2. Download and verify required files:
 
 ```bash
 git clone git@github.com:weijiekoh/malvarma.git && \
 cd malvarma && \
 git clone git@github.com:weijiekoh/py2-monero-wallet-generator.git && \
-wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/2017-11-29-raspbian-stretch-lite.zip -O raspberry/2017-11-29-raspbian-stretch-lite.zip && \
-wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/2017-11-29-raspbian-stretch-lite.zip.sha256 -O raspberry/checksum.sha256 && \
-cd raspberry && \
-sha256sum -c checksum.sha256
+sh download_raspbian.sh && \
 ```
 
-If the `sha256sum` command fails, **do not continue**.
+If the `download_raspbian.sh` command fails, **do not continue** as the
+Raspbian image may have been tampered with, and should be considered
+unsafe.
 
-3) Modify the Raspbian image
-
-`build.py` requires root permissions through `sudo` because it needs to mount the Raspbian image using `guestmount`.
+### 3. Build a Malvarma image
 
 ```bash
-unzip 2017-11-29-raspbian-stretch-lite.zip && \
-cd .. && \
-sudo python3 build.py
+python3 build.py
 ```
+
+Note: `build.py` may require root permissions through `sudo` because
+`guestmount` may not work for non-root users. If you encounter the following error:
+
+```
+libguestfs: error: /usr/bin/supermin exited with error status 1.
+```
+ 
+please run `sudo python3 build.py` instead.
+
+#### What `build.py` does
 
 `build.py` configures the Raspberry Pi image as follows:
 
-- Disables WiFi and Bluetooth (in case it's run on a wireless-enabled Raspberry Pi
-- Removes some unnecessary system services
-- Install `rng-tools` and checks for sufficiently high entropy using `rngtest`
-- Automatically run `python py2-monero-wallet-generator/gen_wallet.py` upon
-  boot to generate and display the keys to a cold wallet 
+- Disables WiFi and Bluetooth (in case it's run on a wireless-enabled Raspberry
+  Pi)
+- Removes some unnecessary system services (this makes it boot faster)
+- Configures /etc/rc.local to perform these tasks upon boot:
+    - Install `rng-tools` and check for sufficiently high entropy using `rngtest`
+    - If `rngtest` passes with a maximum of 5 out of 1000 FIPS-140-2 failures, run
+      `python py2-monero-wallet-generator/gen_wallet.py` to generate and
+      display the keys to a cold wallet 
 
-4) Flash the image onto an SD card
+Note that `build.py` is **not deterministic**. The output file
+(`raspberry/malvarma-<version>.img`) is likely to differ over multiple runs,
+even with the same Raspbian image and Malvarma code. This is probably because
+`libguestfs` is also non-deterministic.  If anyone has suggestions on how to
+deterministically modify raw disk images, please contact the author. In the
+meantime, please audit the code yourself if you want to fully trust it.
+
+You may choose to emulate the image using QEMU, but since QEMU will modify the
+image, remember to delete and rebuild it when you are done: `cd raspberry && sh run_qemu.sh`
+
+### 4. Flash the image onto an SD card
 
 Assuming that your SD card reader is at `/dev/mmcblk0`, run:
 
 ```bash
-sudo dd bs=4M if=raspberry/2017-11-29-raspbian-stretch-lite.img of=/dev/mmcblk0 conv=fsync
+sudo dd bs=4M if=raspberry/malvarma.img of=/dev/mmcblk0 conv=fsync
 ```
 
 ## What does *malvarma* mean?

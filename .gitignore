@@ -1,3 +1,4 @@
+build/*
 raspberry/*.zip
 raspberry/*.img
 py2-monero-wallet-generator/

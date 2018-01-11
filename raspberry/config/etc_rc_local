@@ -1,18 +1,14 @@
 #!/bin/bash -e
-echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
+
+for i in {1..40}
+do
+    echo
+done
 
 echo "[malvarma] Running Malvarma."
 echo "[malvarma] Installing rng-tools (don't worry about rng-tools.service errors)"
 
 dpkg -i /rng-tools_2-unofficial-mt.14-1_armhf.deb &> /dev/null
-sleep 1
 
 echo "[malvarma] Testing available entropy..."
 
@@ -21,7 +17,7 @@ if python /test_entropy.py ; then
  
     echo "[malvarma] Generating cold wallet..."
 
-    python /py2-monero-wallet-generator/gen_wallet.py
+    python /py2-monero-wallet-generator/gen_wallet.py --clear
 
     echo "[malvarma] You may now destroy this device and SD card. Visit https://github.com/weijiekoh/malvarma for instructions."
 else

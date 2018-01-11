@@ -7,9 +7,11 @@ As far as cold wallet creation goes, Malvarma is designed to be very simple to
 set up and use, while meeting the security needs of highly security-conscious people.
 
 **Malvarma is currently in an alpha release stage and has not been vetted. Use
-at your own risk.**
+at your own risk.** At the time of writing, Malvarma has been tested on a
+Raspberry Pi 3 Model B v1.2, but not a Raspberry Pi Zero yet.
 
-This guide is for Ubuntu Linux users. 
+This guide is for Linux users, but savvy Windows or OSX users should be able to
+perform equivalent steps on their machines.
 
 ## 1. Download the Malvarma image
 
@@ -196,11 +198,10 @@ Future plans:
 
 ## Building Malvarma
 
-If you want to make a copy of Malvarma yourself, follow these instructions:
+If you want to make a copy of Malvarma yourself, follow these instructions.
+They have been tested on Ubuntu 17.10.
 
 ### 1. Install dependencies:
-
-Instructions tested on Ubuntu 17.10:
 
 ```bash
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe" && \

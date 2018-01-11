@@ -202,7 +202,7 @@ Instructions tested on Ubuntu 17.10:
 ```bash
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe" && \
 sudo apt update && \
-sudo apt -y install libguestfs-tools git python3 coreutils wget
+sudo apt -y install libguestfs-tools git python3 coreutils wget axel
 ```
 
 ### 2. Download and verify required files:

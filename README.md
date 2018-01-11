@@ -6,11 +6,20 @@ user to use. When Malvarma is complete, a user will be able
 to generate a cold wallet in just a few broad steps:
 
 1. Download, verify, and burn the Malvarma image onto a microSD card.
+
+```bash
+
+```
+
+**Do not continue** if the SHA256 verification fails.
+
 2. Insert the card into a non-wireless
 [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/),
-plug it into a HDMI screen, and turn it on.
+plug it into a HDMI screen and miniUSB power source, and turn it on.
+
 3. A mnemonic seed, private spend/view keys, and public address should
    automatically show up on the screen. Write it down and store it safely.
+
 4. Following this visual guide, destroy particular components of the Raspberry
    Pi Zero using hand tools.
 
@@ -148,7 +157,7 @@ sudo python3 build.py
 
 - Disables WiFi and Bluetooth (in case it's run on a wireless-enabled Raspberry Pi
 - Removes some unnecessary system services
-- TODO: install `rng-tools` and run `rngtest`
+- Install `rng-tools` and checks for sufficiently high entropy using `rngtest`
 - Automatically run `python py2-monero-wallet-generator/gen_wallet.py` upon
   boot to generate and display the keys to a cold wallet 
 

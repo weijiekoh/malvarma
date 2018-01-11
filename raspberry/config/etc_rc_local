@@ -1,14 +1,18 @@
 #!/bin/bash -e
-
-for i in {1..40}
-do
-    echo
-done
+echo
+echo
+echo
+echo
+echo
+echo
+echo
+echo
 
 echo "[malvarma] Running Malvarma."
 echo "[malvarma] Installing rng-tools (don't worry about rng-tools.service errors)"
 
 dpkg -i /rng-tools_2-unofficial-mt.14-1_armhf.deb &> /dev/null
+sleep 1
 
 echo "[malvarma] Testing available entropy..."
 

@@ -17,7 +17,7 @@ to perform equivalent steps on their machines.
 
 ## 1. Download the Malvarma image
 
-Use any of these links to download the Malvarma image:
+Use any of these links to download the Malvarma image (300+ MB):
 
 - [Mega](https://mega.nz/#F!SldQGZgY!9D6aqWp1niaemkS8tU2DqQ)
 - [Dropbox](https://www.dropbox.com/sh/imxygsxfdek7mz9/AAB53XHmV6LYwAdKP4GNY6ALa?dl=0)

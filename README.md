@@ -254,6 +254,11 @@ suggestions on how to deterministically modify raw disk images, please contact
 the author. In the meantime, please audit the code yourself if you want to
 fully trust it.
 
+Malvarma uses the `rng-tools` package:
+`raspberry/rng-tools_2-unofficial-mt.14-1_armhf.deb`. To verify the
+authenticity of this file, refer to
+[verify_rng-tools.md](https://github.com/weijiekoh/malvarma/blob/master/verify_rng-tools.md).
+
 ### 4. Output `.img` file
 
 The built `.img` file will be in the `build/` directory, and is ready to be

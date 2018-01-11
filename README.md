@@ -273,7 +273,9 @@ image, **remember to delete and rebuild it when you are done**.
 ```
 sudo apt -y install qemu-system-arm
 
-sh run_qemu.sh && rm -rf build/malvarma-0.1.1-alpha.img
+python3 qemulate_malvarma.py build/malvarma-<version>.img
+
+rm -rf build/malvarma-<version>.img
 ```
 
 ## What does *malvarma* mean?

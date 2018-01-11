@@ -10,8 +10,11 @@ This guide is for Ubuntu Linux users.
 
 ## 1. Download the Malvarma image
 
+Use any of these links:
+
 [Mega](https://mega.nz/#!bpNQASSb!2mVpUW1cIB_35VHkGEPzCRcdi94EWoiew4_ZTkOI8n0)
-<!--[Dropbox]()-->
+
+[Dropbox](https://www.dropbox.com/s/496mpyrmzkx7qea/malvarma-0.1-alpha.tar.bz2?dl=0)
 
 Mirrors:
 

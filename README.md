@@ -15,17 +15,17 @@ This guide is for Ubuntu Linux users.
 
 Use any of these links to download the Malvarma image:
 
-[Mega](https://mega.nz/#!bpNQASSb!2mVpUW1cIB_35VHkGEPzCRcdi94EWoiew4_ZTkOI8n0)
+[Mega](https://mega.nz/#F!SldQGZgY!9D6aqWp1niaemkS8tU2DqQ)
 
-[Dropbox](https://www.dropbox.com/s/496mpyrmzkx7qea/malvarma-0.1-alpha.tar.bz2?dl=0)
+[Dropbox](https://www.dropbox.com/sh/imxygsxfdek7mz9/AAB53XHmV6LYwAdKP4GNY6ALa?dl=0)
 
 P2P Mirrors:
 
-[Instant.io](https://instant.io/#1a600dce530029378851e80af65021edc5eb78ab)
+[Instant.io](https://instant.io/#8e06b76f39eca3a0cd4e4bebe3020176fdb0ebd3)
 
 BitTorrent Magnet URI:
 ```
-magnet:?xt=urn:btih:1a600dce530029378851e80af65021edc5eb78ab&dn=malvarma-0.1-alpha.tar.bz2&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com
+magnet:?xt=urn:btih:8e06b76f39eca3a0cd4e4bebe3020176fdb0ebd3&dn=malvarma-0.1.1-alpha.tar.bz2&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com
 ```
 
 ### 2. Unpack and verify the image

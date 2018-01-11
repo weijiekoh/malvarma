@@ -16,7 +16,7 @@ Use any of these links:
 
 [Dropbox](https://www.dropbox.com/s/496mpyrmzkx7qea/malvarma-0.1-alpha.tar.bz2?dl=0)
 
-Mirrors:
+P2P Mirrors:
 
 [Instant.io](https://instant.io/#1a600dce530029378851e80af65021edc5eb78ab)
 

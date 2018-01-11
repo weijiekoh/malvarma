@@ -225,17 +225,12 @@ unsafe.
 ### 3. Build a Malvarma image
 
 ```bash
-python3 build.py
+sudo python3 build.py
 ```
 
-Note: `build.py` may require root permissions through `sudo` because
-`guestmount` may not work for non-root users. If you encounter the following error:
-
-```
-libguestfs: error: /usr/bin/supermin exited with error status 1.
-```
- 
-please run `sudo python3 build.py` instead.
+Note: `build.py` requires root permissions through `sudo` because
+`guestmount` [does not work](https://bugs.launchpad.net/fuel/+bug/1467579) for
+non-root users.
 
 #### What `build.py` does
 

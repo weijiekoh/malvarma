@@ -124,6 +124,7 @@ if __name__ == "__main__":
         copy_config_cmd,
         copy_cmdline_cmd,
         unmount_cmd,
+        "sleep 5",
         mount_cmd,
     ]
 

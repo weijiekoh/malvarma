@@ -9,10 +9,10 @@ security. Use at your own risk.**
 **Do not run Malvarma on a Raspberry Pi Zero W** because it has wireless
 connectivity and is therefore not an airgapped device.
 
+Here is Malvarma running on a Raspberry Pi Zero connected to a HDMI television
+set:
 <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/malvarma.png"
      height=250 />
-
-*There are no funds in the address in this photograph ;)*
 
 It has been tested on a non-wireless Pi Zero v1.3 and Pi 3 Model B v1.2, but
 should ideally only be run on the non-wireless Pi Zero as it is airgapped by

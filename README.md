@@ -22,11 +22,6 @@ Use any of these links to download the Malvarma image (300+ MB):
 - [Mega](https://mega.nz/#F!SldQGZgY!9D6aqWp1niaemkS8tU2DqQ)
 - [Dropbox](https://www.dropbox.com/sh/imxygsxfdek7mz9/AAB53XHmV6LYwAdKP4GNY6ALa?dl=0)
 
-P2P Mirrors:
-
-- IPFS
-    - `ipfs cat QmSxHrc7M9fYLKs1kf2HGj2rQxV5hq4mS2a46eWUNq4wUC > malvarma-0.1.1-alpha.tar.bz2`
-    - `wget -nv https://ipfs.io/ipfs/QmSxHrc7M9fYLKs1kf2HGj2rQxV5hq4mS2a46eWUNq4wUC -O malvarma-0.1.1-alpha.tar.bz2`
 
 ### 2. Unpack and verify the image
 

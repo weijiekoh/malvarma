@@ -1,26 +1,32 @@
 # Malvarma: Secure Monero cold wallets for the truly paranoid
  
-Malvarma is a Raspberry Pi Zero image which securely generates a cold Monero
-wallet.
+Malvarma is a Raspberry Pi Zero image which lets you securely generate a cold
+Monero wallet. It is designed to be secure without sacrificing usability.
 
-As far as cold wallet creation goes, Malvarma is designed to be very simple to
-set up and use. It also strives to meet the needs of highly security-conscious
-people.
+**Malvarma is currently in an alpha release stage and has not been vetted for
+security. Use at your own risk.** 
 
-**Malvarma is currently in an alpha release stage and has not been vetted. Use
-at your own risk.** At the time of writing, Malvarma has only been tested on a
-Raspberry Pi 3 Model B v1.2. I will test it on the Raspberry Pi Zero in the
-coming few weeks.
+**Do not run Malvarma on a Raspberry Pi Zero W** because it has wireless
+connectivity and is therefore not an airgapped device.
+
+<img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/malvarma.png"
+     height=250 />
+
+It has been tested on a non-wireless Pi Zero v1.3 and Pi 3 Model B v1.2, but
+should ideally only be run on the non-wireless Pi Zero as it is airgapped by
+default. 
+
+## Running Malvarma
 
 This guide is for Linux users, but savvy Windows or macOS users should be able
 to perform equivalent steps on their machines.
 
-## 1. Download the Malvarma image
+### 1. Download the Malvarma image
 
 Use any of these links to download the Malvarma image (300+ MB):
 
-- [Mega](https://mega.nz/#F!SldQGZgY!9D6aqWp1niaemkS8tU2DqQ)
 - [Dropbox](https://www.dropbox.com/sh/imxygsxfdek7mz9/AAB53XHmV6LYwAdKP4GNY6ALa?dl=0)
+- [Mega](https://mega.nz/#F!SldQGZgY!9D6aqWp1niaemkS8tU2DqQ)
 
 
 ### 2. Unpack and verify the image
@@ -59,9 +65,9 @@ output of an actual Raspberry Pi running Malvarma.
 <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/loading.png"
      height=300 />
 
-After 1-2 minutes, a mnemonic seed, private spend/view keys, and public address
-should automatically show up on the screen. Write down all this information and
-store it safely. **At minimum, write down the mnemonic seed.**
+After a few minutes, a mnemonic seed, private spend/view keys, and public
+address should automatically show up on the screen. Write down all this
+information and store it safely. **At minimum, write down the mnemonic seed.**
 
 <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/final.png"
      height=250 />

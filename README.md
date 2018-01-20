@@ -71,6 +71,9 @@ After a few minutes, a mnemonic seed, private spend/view keys, and public
 address should automatically show up on the screen. Write down all this
 information and store it safely. **At minimum, write down the mnemonic seed.**
 
+**Do not take a picture of the screen with a camera or store the private keys
+on any electronic device.**
+
 <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/final.png"
      height=250 />
 
@@ -189,8 +192,9 @@ writing (early January 2018), there are no commercially available hardware
 wallets for Monero, although Ledger support is reportedly [in the
 works](https://www.reddit.com/r/Monero/comments/7de2pj/ledger_hardware_wallet_monero_integration_some/).
 
-Note: **Malvarma is not a hardware wallet**, and that it will not store any
-generated wallets.
+Note: **Malvarma is neither a hardware wallet, nor will it store any generated
+wallets. You must write down the private keys and mnemonic seed before sending
+any funds to your cold wallet.**
 
 ## Development roadmap
 

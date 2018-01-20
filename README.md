@@ -11,7 +11,7 @@ connectivity and is therefore not an airgapped device.
 
 Here is Malvarma running on a Raspberry Pi Zero connected to a HDMI television
 set (click for [video](https://vimeo.com/251990871)):
-<a href="https://vimeo.com/251990871">
+<a href="https://vimeo.com/251990871" target="_blank">
     <img src="https://raw.githubusercontent.com/weijiekoh/malvarma/master/readme_imgs/malvarma.png"
          height=250 />
 </a>

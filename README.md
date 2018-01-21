@@ -9,6 +9,9 @@ security. Use at your own risk.**
 **Do not run Malvarma on a Raspberry Pi Zero W** because it has wireless
 connectivity and is therefore not an airgapped device.
 
+**Do not run Malvarma on an Internet-enabled TV or any display device connected
+to a network** for the same reason.
+
 Here is Malvarma running on a Raspberry Pi Zero connected to a HDMI television
 set (click for [video](https://vimeo.com/251990871)):
 <a href="https://vimeo.com/251990871" target="_blank">
@@ -70,8 +73,8 @@ output of an actual Raspberry Pi running Malvarma.
      height=300 />
 
 After a few minutes, a mnemonic seed, private spend/view keys, and public
-address should automatically show up on the screen. Write down all this
-information and store it safely. **At minimum, write down the mnemonic seed.**
+address should automatically show up on the screen. Write down multiple copies
+of this information and store them safely.
 
 **Do not take a picture of the screen with a camera or store the private keys
 on any electronic device.**

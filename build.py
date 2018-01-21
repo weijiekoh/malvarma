@@ -36,7 +36,6 @@ if __name__ == "__main__":
     walletgen_dir = os.path.join(current_dir, WALLETGEN_DIRNAME)
     rngtools_file = os.path.join(RPI_DIR, RNGTOOLS_FILE)
     test_entropy_file = os.path.join(current_dir, TEST_ENTROPY_FILE)
-    
 
     # command to create the mountpt directory
     create_mountpt_cmd = "mkdir -p {mountpt}".format(mountpt=mountpt)
@@ -105,21 +104,24 @@ if __name__ == "__main__":
     file_removal_commands = []
     for f in files_to_remove:
         cmd = "rm -rf {mountpt}{f}".format(mountpt=mountpt, f=f)
-        file_removal_commands.append(cmd)
+
+        # make sure not to delete anything on the host!
+        if not cmd.startswith("/"):
+            file_removal_commands.append(cmd)
 
     # commands to copy in files needed to create the cold wallet
-    copy_rngtools_cmd = "cp -r {rngtools_file} {mountpt}".format(rngtools_file=rngtools_file, mountpt=mountpt)
-    copy_wallegen_cmd = "cp -r {walletgen_dir} {mountpt}".format(walletgen_dir=walletgen_dir, mountpt=mountpt)
-    copy_rc_local_cmd = "cp {rc_local_file} {mountpt}/etc/rc.local".format(rc_local_file=rc_local_file, mountpt=mountpt)
-    copy_test_ent_cmd = "cp {test_entropy_file} {mountpt}".format(test_entropy_file=test_entropy_file, mountpt=mountpt)
+    copy_rngtools_cmd = "cp -r {rngtools_file} {mountpt}" \
+        .format(rngtools_file=rngtools_file, mountpt=mountpt)
+    copy_wallegen_cmd = "cp -r {walletgen_dir} {mountpt}" \
+        .format(walletgen_dir=walletgen_dir, mountpt=mountpt)
+    copy_rc_local_cmd = "cp {rc_local_file} {mountpt}/etc/rc.local" \
+        .format(rc_local_file=rc_local_file, mountpt=mountpt)
+    copy_test_ent_cmd = "cp {test_entropy_file} {mountpt}" \
+        .format(test_entropy_file=test_entropy_file, mountpt=mountpt)
 
     # rename the output img file 
     mv_malvarma_cmd = "mv {imgfile} {malvarma_imgfile}" \
         .format(imgfile=imgfile, malvarma_imgfile=malvarma_imgfile)
-
-    # create a checksum file
-    # hash_malvarma_cmd = "sha256sum {malvarma_imgfile} | sed 's/\.\/{build_dir}\///' > {malvarma_checksum_file}" \
-        # .format(malvarma_imgfile=malvarma_imgfile, malvarma_checksum_file=malvarma_checksum_file, build_dir=BUILD_DIR)
 
     # execute each command sequentially
     command_sequence = [
@@ -141,13 +143,13 @@ if __name__ == "__main__":
         copy_test_ent_cmd,
         unmount_cmd,
         mv_malvarma_cmd,
-        # hash_malvarma_cmd,
     ]
 
     for command in command_sequence:
         try:
             print(command)
-            subprocess.check_call(command, shell=True, stderr=subprocess.STDOUT)
+            subprocess.check_call(
+                command, shell=True, stderr=subprocess.STDOUT)
         except:
             print("Could not build Malvarma. Exiting.")
             break

@@ -1,7 +1,7 @@
 # Malvarma: Secure Monero cold wallets for the truly paranoid
  
-Malvarma is a Raspberry Pi Zero image which lets you securely generate a cold
-Monero wallet. It is designed to be secure without sacrificing usability.
+Malvarma is a Raspberry Pi Zero image which lets you generate a Monero cold
+wallet securely and easily.
 
 **Malvarma is currently in an alpha release stage and has not been vetted for
 security. Use at your own risk.** 
